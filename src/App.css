@@ -1,0 +1,101 @@
+
+.App {
+  background: linear-gradient(#0008, #0007), url("./assets/img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Helvetica;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App h1 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+/*area search*/
+.Searcher {
+  width: 100%;
+  max-width: 350px;
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  border-radius: 1rem;
+  gap: 5px;
+}
+
+.Searcher input,
+.Searcher button {
+  height: 32px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+.Searcher button {
+  background: var(--secondary);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: .2s;
+}
+
+.Searcher button span {
+  color: #fff;
+  pointer-events: none;
+}
+
+.Searcher button:hover {
+  opacity: .9;
+  transform: scale(1.1);
+}
+
+/*area Results*/
+
+.Results {
+  max-width: 350px;
+  width: 350px;
+  background-color: var(--secondary);
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  padding: 2rem 0;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.Results h3 {
+  font-size: 2.5rem;
+}
+
+/*media*/
+@media (max-width: 425px){
+
+  html {
+    font-size: 12px;
+  }
+
+  .Searcher,
+  .Results {
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px){
+
+  .App h1 {
+    font-size: 2.5rem;
+  }
+}
